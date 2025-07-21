@@ -1,0 +1,28 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 0;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: rosybrown;
+  padding: 0.5rem 1rem;
+  width: 31rem;
+
+  &__done {
+    background-color: greenyellow;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+}
