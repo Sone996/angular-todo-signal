@@ -19,3 +19,10 @@ export const todoList: TodoItem[] = [
   { id: 16, title: 'Backup files', description: 'Push recent project work to GitHub.', done: false },
   { id: 17, title: 'Meditate', description: '10-minute breathing session before bed.', done: true },
 ];
+
+export const todoItem: TodoItem = {
+  id: 1,
+  title: 'Buy groceries',
+  description: 'Milk, bread, eggs, and fruits.',
+  done: false,
+};

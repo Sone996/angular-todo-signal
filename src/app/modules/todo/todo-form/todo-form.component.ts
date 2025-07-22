@@ -3,9 +3,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { TodoService } from '../../../data';
+import { TodoItem, TodoService } from '../../../data';
 import { ActivatedRoute } from '@angular/router';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-todo-form',
@@ -45,8 +45,7 @@ export class TodoFormComponent implements OnInit {
       .subscribe();
   }
 
-  submitRequest$() {
-    this.#todoService.submitTodo$(this.form.getRawValue(), this.$paramId());
-    // this.#todoService.createTodo$(this.form.getRawValue());
+  submitRequest$(): Observable<TodoItem[]> {
+    return this.#todoService.submitTodo$(this.form.getRawValue(), this.$paramId());
   }
 }
