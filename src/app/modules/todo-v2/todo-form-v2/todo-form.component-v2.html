@@ -1,0 +1,12 @@
+<h1>{{ $formTitle() }}</h1>
+<form [formGroup]="form" (ngSubmit)="submitRequest()" class="form" autocomplete="off" class="form">
+  <mat-form-field>
+    <mat-label>Title:</mat-label>
+    <input matInput formControlName="title" type="text" placeholder="Title" testId="todo-form-title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description:</mat-label>
+    <textarea matInput formControlName="description" placeholder="Description" testId="todo-form-title"></textarea>
+  </mat-form-field>
+  <button mat-button class="form__button">{{ $buttonText() }}</button>
+</form>
