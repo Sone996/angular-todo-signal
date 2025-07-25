@@ -1,0 +1,7 @@
+@for (todo of todoList(); track todo.id) {
+  <div class="todo-item">
+    <span>{{ todo.title }}</span>
+    <span class="done" [class.done__isDone]="todo.done">{{ todo.done ? 'Done' : 'Not Done' }}</span>
+    <button mat-button (click)="setItemForEdit(todo.id)">Edit</button>
+  </div>
+}

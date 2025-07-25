@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}

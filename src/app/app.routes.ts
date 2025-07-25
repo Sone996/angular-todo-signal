@@ -7,6 +7,10 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'todo',
+    loadComponent: () => import('./modules/todo-list/todo-list.component').then((c) => c.TodoListComponent),
+  },
+  {
     path: '**',
     redirectTo: '/',
   },

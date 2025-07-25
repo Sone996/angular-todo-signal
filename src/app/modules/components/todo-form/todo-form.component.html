@@ -1,0 +1,13 @@
+<h1>{{ pageTitle() }}</h1>
+<form [formGroup]="todoForm" (ngSubmit)="submitRequest()" class="todo-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" placeholder="Title..." />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description" placeholder="Description..."></textarea>
+  </mat-form-field>
+  <mat-checkbox formControlName="done">Done</mat-checkbox>
+  <button mat-button type="submit">{{ buttonText() }}</button>
+</form>
