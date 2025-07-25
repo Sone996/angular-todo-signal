@@ -1,0 +1,6 @@
+<input mat-input [formControl]="search" type="text" />
+<mat-selection-list #variantList name="variants" [multiple]="false">
+  @for (variant of filteredItems(); track $index) {
+    <mat-list-option [value]="variant.id" (click)="setItem(variant.id)"> {{ variant.name }}</mat-list-option>
+  }
+</mat-selection-list>

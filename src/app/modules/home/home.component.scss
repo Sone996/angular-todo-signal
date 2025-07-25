@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  &__content {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  &__singleItem {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+}

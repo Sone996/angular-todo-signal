@@ -1,14 +1,12 @@
 :host {
   height: 100%;
   display: flex;
-  justify-content: center;
+  width: 100vw;
+  position: relative;
 
-  .router-outlet-wrapper {
-    border-radius: 32px;
-    padding: 32px;
-    border: 1px solid white;
-    width: 800px;
-    height: 500px;
+  .app-wrapper {
+    width: 100vw;
+    height: 100%;
     overflow: hidden;
   }
 }

@@ -1,0 +1,25 @@
+@if (selectedItem(); as item) {
+  <h3>{{ item.name }}</h3>
+  <span>Gene: {{ item.gene }}</span>
+  <span>Location: {{ item.location }}</span>
+  <span>Variant Type: {{ item.variantType }}</span>
+  <span>Frequency: {{ item.frequency }}</span>
+  <span>Pathogenicity: {{ item.pathogenicity }}</span>
+  <span>Exon: {{ item.exon }}</span>
+  <span>Clinical Significance: {{ item.clinicalSignificance }}</span>
+  <span>Reference: {{ item.references }}</span>
+  <mat-divider />
+  <section class="example-section">
+    @for (prof of pathogenicityList(); track prof) {
+      <mat-checkbox
+        class="example-margin"
+        [value]="item.pathogenicity"
+        [checked]="item.pathogenicity === prof"
+        (change)="onCheckedChange(prof)"
+        >{{ prof }}</mat-checkbox
+      >
+    }
+  </section>
+} @else {
+  <p>No selected item</p>
+}
