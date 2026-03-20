@@ -31,6 +31,7 @@ export class TodoFormComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.$paramId()) {
+      console.log('test');
       return;
     }
 
